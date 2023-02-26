@@ -5,9 +5,6 @@ public abstract class Equipe {
     private int nbButsMarques;
     private int pointsEquipe;
     abstract int calculNbPoints(Match match);
-    void calculNbButsEncaisses(){
-        
-    }
 
     public Equipe(String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
         this.name = name;
@@ -74,9 +71,11 @@ public abstract class Equipe {
         setNbButsMarques(getNbButsMarques()+match.getScoreEquipe());
     }
     public String restituerResultat(){
-        String res = getName()+" nbPoints : "+getPointsEquipe()+
-                " moyEncaissee :"+calculMoyenneEncaisses()+
-                " moyMarques : "+calculMoyenneMarques();
+        String res = getName()+"\nnbPoints : "+getPointsEquipe()+"\n"+
+                "nbButsMarques : "+getNbButsMarques()+"\n"+
+                "moyMarques : "+calculMoyenneMarques()+"\n"+
+                "nbButsEncaisses : "+getNbButsEncaisses()+"\n"+
+                "moyEncaissee : "+calculMoyenneEncaisses();
         return res;
     }
 }

@@ -10,7 +10,7 @@ public class EHand extends Equipe{
         if (match.getScoreAdversaire() > match.getScoreEquipe()){
             res = 0;
         }
-        else if (match.getScoreEquipe() == match.getScoreEquipe()){
+        else if (match.getScoreEquipe() == match.getScoreAdversaire()){
             res = 1;
         }
         else {
