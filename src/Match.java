@@ -1,8 +1,9 @@
 public class Match {
     private int scoreEquipe;
+
     private int scoreAdversaire;
 
-    public Match(int scoreEquipe, int scoreAdversaire) {
+    public void majScore(int scoreEquipe, int scoreAdversaire) {
         this.scoreEquipe = scoreEquipe;
         this.scoreAdversaire = scoreAdversaire;
     }
@@ -15,11 +16,4 @@ public class Match {
         return scoreAdversaire;
     }
 
-    public void setScoreEquipe(int scoreEquipe) {
-        this.scoreEquipe = scoreEquipe;
-    }
-
-    public void setScoreAdversaire(int scoreAdversaire) {
-        this.scoreAdversaire = scoreAdversaire;
-    }
 }

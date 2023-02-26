@@ -1,10 +1,10 @@
+//TODO:ajouter un attribut type de sport(Enum) => possibiliter de faire des switch/case...
 public abstract class Equipe {
     private String name;
     private int nbMatch;
     private int nbButsEncaisses;
     private int nbButsMarques;
     private int pointsEquipe;
-    abstract int calculNbPoints(Match match);
 
     public Equipe(String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
         this.name = name;
@@ -13,69 +13,34 @@ public abstract class Equipe {
         this.nbButsMarques = nbButsMarques;
         this.pointsEquipe = pointsEquipe;
     }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    abstract int calculNbPoints(Match match);
+
+    private float calculMoyenneEncaisses(){
+        return (float) nbButsEncaisses / nbMatch;
     }
 
-    public int getNbMatch() {
-        return nbMatch;
+    private float calculMoyenneMarques(){
+        return (float) nbButsMarques / nbMatch;
     }
 
-    public void setNbMatch(int nbMatch) {
-        this.nbMatch = nbMatch;
-    }
-
-    public int getNbButsEncaisses() {
-        return nbButsEncaisses;
-    }
-
-    public void setNbButsEncaisses(int nbButsEncaisses) {
-        this.nbButsEncaisses = nbButsEncaisses;
-    }
-
-    public int getNbButsMarques() {
-        return nbButsMarques;
-    }
-
-    public void setNbButsMarques(int nbButsMarques) {
-        this.nbButsMarques = nbButsMarques;
-    }
-
-    public int getPointsEquipe() {
-        return pointsEquipe;
-    }
-
-    public void setPointsEquipe(int pointsEquipe) {
-        this.pointsEquipe = pointsEquipe;
-    }
-
-    float calculMoyenneEncaisses(){
-        float res = (float) getNbButsEncaisses() / getNbMatch();
-        return res;
-    }
-    float calculMoyenneMarques(){
-        float res = (float) getNbButsMarques() / getNbMatch();
-        return res;
-    }
     public void majSuiteAUnMatch(Match match){
-        int ancienNbPoints = getPointsEquipe();
-        int nbPointsMatch = calculNbPoints(match);
-        setPointsEquipe(ancienNbPoints + nbPointsMatch);
-        setNbMatch(getNbMatch()+1);
-        setNbButsEncaisses(getNbButsEncaisses()+match.getScoreAdversaire());
-        setNbButsMarques(getNbButsMarques()+match.getScoreEquipe());
+        pointsEquipe=pointsEquipe + calculNbPoints(match);
+        nbMatch=nbMatch+1;
+        nbButsEncaisses=nbButsEncaisses+match.getScoreAdversaire();
+        nbButsMarques=nbButsMarques+match.getScoreEquipe();
+        System.out.println("Match equipe "+name+" score:"+match.getScoreEquipe()+"-"+match.getScoreAdversaire());
     }
+
     public String restituerResultat(){
-        String res = getName()+"\nnbPoints : "+getPointsEquipe()+"\n"+
-                "nbButsMarques : "+getNbButsMarques()+"\n"+
-                "moyMarques : "+calculMoyenneMarques()+"\n"+
-                "nbButsEncaisses : "+getNbButsEncaisses()+"\n"+
+        return name+"\t"+"nbPoints : "+pointsEquipe+"\t"+
+                "nbButsMarques : "+nbButsMarques+"\t"+
+                "moyMarques : "+calculMoyenneMarques()+"\t"+
+                "nbButsEncaisses : "+nbButsEncaisses+"\t"+
                 "moyEncaissee : "+calculMoyenneEncaisses();
-        return res;
     }
+
 }
