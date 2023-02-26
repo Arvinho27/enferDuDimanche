@@ -7,7 +7,7 @@ public class Efutsal extends EFoot{
     @Override
     int calculNbPoints(Match match){
         int res = super.calculNbPoints(match);
-        if (match.scoreEquipe >= 5){
+        if (match.getScoreEquipe() >= 5){
             res += 1;
         }
         return res;

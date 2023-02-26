@@ -6,7 +6,7 @@ public class EVolley extends Equipe {
     @Override
     int calculNbPoints(Match match){
         int res;
-        res = match.scoreEquipe;
+        res = match.getScoreEquipe();
         return res;
     }
 }

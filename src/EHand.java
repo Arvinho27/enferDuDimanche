@@ -7,13 +7,15 @@ public class EHand extends Equipe{
     @Override
     int calculNbPoints(Match match){
         int res;
-        if (match.ScoreAdversaire > match.scoreEquipe){
+        if (match.getScoreAdversaire() > match.getScoreEquipe()){
             res = 0;
         }
-        else if (match.ScoreAdversaire == match.scoreEquipe){
+        else if (match.getScoreEquipe() == match.getScoreEquipe()){
             res = 1;
         }
-        else res = 2;
+        else {
+            res = 2;
+        }
         return res;
     }
 }

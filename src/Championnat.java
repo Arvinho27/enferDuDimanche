@@ -1,35 +1,49 @@
 public class Championnat {
-    EFoot e1;
+    private EFoot eFoot;
     EHand e2;
     Efutsal e3;
     EVolley e4;
     ERugby e5;
-    Match mFoot;
-    Match mHand;
-    Match mVolley;
-    Match mFutsal;
-    Match mRugby;
-    Match mFoot2;
-    Match mHand2;
-    Match mVolley2;
-    Match mFutsal2;
-    Match mRugby2;
+    Match match;
 
-    public Championnat(EFoot e1, EHand e2, Efutsal e3, EVolley e4, ERugby e5, Match mFoot, Match mHand, Match mVolley, Match mFutsal, Match mRugby, Match mFoot2, Match mHand2, Match mVolley2, Match mFutsal2, Match mRugby2) {
-        this.e1 = e1;
+    public Championnat() {
+        this.eFoot = new EFoot("Bayern",0,0,0,0);
+        this.e2 = new EHand("Montpellier",0,0,0,0);
+        this.e3 = new Efutsal("Flamengo",0,0,0,0);
+        this.e4 = new EVolley("France",0,0,0,0);
+        this.e5 = new ERugby("Toulon",0,0,0,0);
+        this.match = new Match(0,0);
+    }
+
+    public EFoot geteFoot() {
+        return eFoot;
+    }
+
+    public void seteFoot(EFoot eFoot) {
+        this.eFoot = eFoot;
+    }
+
+    public Championnat(EFoot eFoot, EHand e2, Efutsal e3, EVolley e4, ERugby e5, Match match) {
+        this.eFoot = eFoot;
         this.e2 = e2;
         this.e3 = e3;
         this.e4 = e4;
         this.e5 = e5;
-        this.mFoot = mFoot;
-        this.mHand = mHand;
-        this.mVolley = mVolley;
-        this.mFutsal = mFutsal;
-        this.mRugby = mRugby;
-        this.mFoot2 = mFoot2;
-        this.mHand2 = mHand2;
-        this.mVolley2 = mVolley2;
-        this.mFutsal2 = mFutsal2;
-        this.mRugby2 = mRugby2;
+        this.match = match;
+    }
+
+    public void entrerScore(String teamName, int scoreAdversaire, int scoreEquipe) {
+        match.setScoreEquipe(scoreEquipe);
+        match.setScoreAdversaire(scoreAdversaire);
+        if (teamName.equals(eFoot.getName())){
+            eFoot.majSuiteAUnMatch(match);
+        }
+        else {
+            System.out.println("Equipe inconnue dans le championnat !");
+        }
+
+    }
+    public String listerNbPointsParEquipe(){
+        return eFoot.restituerResultat() + "\n" + e2.restituerResultat();
     }
 }
