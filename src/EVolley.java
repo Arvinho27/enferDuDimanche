@@ -1,7 +1,8 @@
 public class EVolley extends Equipe {
-    public EVolley(String name) {
-        super(name);
+    public EVolley(String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
+        super(name, nbMatch, nbButsEncaisses, nbButsMarques, pointsEquipe);
     }
+
     @Override
     int calculNbPoints(Match match){
         int res;

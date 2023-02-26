@@ -1,6 +1,6 @@
 public class EFoot extends Equipe {
-    public EFoot(String name) {
-        super(name);
+    public EFoot(String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
+        super(name, nbMatch, nbButsEncaisses, nbButsMarques, pointsEquipe);
     }
 
     @Override
