@@ -1,7 +1,7 @@
 public class Championnat {
     private EFoot eFoot;
     private EHand eHand;
-    private Efutsal eFutsal;
+    private EFutsal EFutsal;
     private EVolley eVolley;
     private ERugby eRugby;
     private  Match match;
@@ -9,7 +9,7 @@ public class Championnat {
     /*public Championnat() {
         this.eFoot = new EFoot(Sport.FOOT,"Bayern", 0, 0, 0, 0);
         this.eHand = new EHand(Sport.HAND,"Montpellier",0,0,0,0);
-        this.eFutsal = new Efutsal(Sport.FUTSAL,"Flamengo",0,0,0,0);
+        this.EFutsal = new EFutsal(Sport.FUTSAL,"Flamengo",0,0,0,0);
         this.eVolley = new EVolley(Sport.VOLLEY,"France",0,0,0,0);
         this.eRugby = new ERugby(Sport.RUGBY,"Toulon",0,0,0,0);
         this.match = new Match(0,0);
@@ -17,7 +17,7 @@ public class Championnat {
 
 
     public Championnat() {
-        this.match = new Match(0,0);
+        this.match = new Match();
     }
 
     public EFoot geteFoot() {
@@ -36,12 +36,12 @@ public class Championnat {
         this.eHand = eHand;
     }
 
-    public Efutsal geteFutsal() {
-        return eFutsal;
+    public EFutsal getEFutsal() {
+        return EFutsal;
     }
 
-    public void seteFutsal(Efutsal eFutsal) {
-        this.eFutsal = eFutsal;
+    public void setEFutsal(EFutsal EFutsal) {
+        this.EFutsal = EFutsal;
     }
 
     public EVolley geteVolley() {
@@ -61,8 +61,7 @@ public class Championnat {
     }
 
     public void entrerScore(Sport sport, int scoreEquipe, int scoreAdversaire) {
-        match.setScoreEquipe(scoreEquipe);
-        match.setScoreAdversaire(scoreAdversaire);
+        match.majScore(scoreEquipe,scoreAdversaire);
         switch (sport) {
             case FOOT: {
                 if (geteFoot() == null){
@@ -79,10 +78,10 @@ public class Championnat {
                 break;
             }
             case FUTSAL: {
-                if (geteFutsal() == null){
-                    seteFutsal(new Efutsal(Sport.FUTSAL,"FLamengo", 0, 0, 0, 0));
+                if (getEFutsal() == null){
+                    setEFutsal(new EFutsal(Sport.FUTSAL,"FLamengo", 0, 0, 0, 0));
                 }
-                eFutsal.majSuiteAUnMatch(match);
+                EFutsal.majSuiteAUnMatch(match);
                 break;
             }
             case VOLLEY: {
@@ -116,9 +115,9 @@ public class Championnat {
         {
             res+= "\n"+eFoot.restituerResultat();
         }
-        if (geteFutsal() != null)
+        if (getEFutsal() != null)
         {
-            res+= "\n"+eFutsal.restituerResultat();
+            res+= "\n"+EFutsal.restituerResultat();
         }
         if (geteRugby() != null)
         {

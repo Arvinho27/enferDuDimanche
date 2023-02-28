@@ -1,6 +1,6 @@
-public class Efutsal extends EFoot{
+public class EFutsal extends EFoot{
 
-    public Efutsal(Sport sport, String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
+    public EFutsal(Sport sport, String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
         super(sport, name, nbMatch, nbButsEncaisses, nbButsMarques, pointsEquipe);
     }
 
