@@ -4,10 +4,9 @@ public class Championnat {
     private EFutsal EFutsal;
     private EVolley eVolley;
     private ERugby eRugby;
-    private  Match match;
+    private final Match match=new Match();
 
     public Championnat() {
-        this.match = new Match();
     }
 
     public EFoot geteFoot() {
@@ -50,40 +49,40 @@ public class Championnat {
         this.eRugby = eRugby;
     }
 
-    public void entrerScore(Sport sport, String nomEquipe, int scoreEquipe, int scoreAdversaire) {
+    public void entrerScore(Sport sport, int scoreEquipe, int scoreAdversaire) {
         match.majScore(scoreEquipe,scoreAdversaire);
         switch (sport) {
             case FOOT: {
                 if (geteFoot() == null){
-                    seteFoot(new EFoot(nomEquipe, 0, 0, 0, 0));
+                    seteFoot(new EFoot(sport.label, 0, 0, 0, 0));
                 }
                 eFoot.majSuiteAUnMatch(match);
                 break;
             }
             case HAND: {
                 if (geteHand() == null){
-                    seteHand(new EHand(nomEquipe, 0, 0, 0, 0));
+                    seteHand(new EHand(sport.label, 0, 0, 0, 0));
                 }
                 eHand.majSuiteAUnMatch(match);
                 break;
             }
             case FUTSAL: {
                 if (getEFutsal() == null){
-                    setEFutsal(new EFutsal(nomEquipe, 0, 0, 0, 0));
+                    setEFutsal(new EFutsal(sport.label, 0, 0, 0, 0));
                 }
                 EFutsal.majSuiteAUnMatch(match);
                 break;
             }
             case VOLLEY: {
                 if (geteVolley() == null){
-                    seteVolley(new EVolley(nomEquipe, 0, 0, 0, 0));
+                    seteVolley(new EVolley(sport.label, 0, 0, 0, 0));
                 }
                 eVolley.majSuiteAUnMatch(match);
                 break;
             }
             case RUGBY: {
                 if (geteRugby() == null){
-                    seteRugby(new ERugby(nomEquipe, 0, 0, 0, 0));
+                    seteRugby(new ERugby(sport.label, 0, 0, 0, 0));
                 }
                 eRugby.majSuiteAUnMatch(match);
                 break;
