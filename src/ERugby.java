@@ -1,7 +1,7 @@
 public class ERugby extends EFoot{
 
-    public ERugby(Sport sport, String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
-        super(sport, name, nbMatch, nbButsEncaisses, nbButsMarques, pointsEquipe);
+    public ERugby(String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
+        super(name, nbMatch, nbButsEncaisses, nbButsMarques, pointsEquipe);
     }
 
     @Override

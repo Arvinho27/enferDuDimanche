@@ -6,16 +6,6 @@ public class Championnat {
     private ERugby eRugby;
     private  Match match;
 
-    /*public Championnat() {
-        this.eFoot = new EFoot(Sport.FOOT,"Bayern", 0, 0, 0, 0);
-        this.eHand = new EHand(Sport.HAND,"Montpellier",0,0,0,0);
-        this.EFutsal = new EFutsal(Sport.FUTSAL,"Flamengo",0,0,0,0);
-        this.eVolley = new EVolley(Sport.VOLLEY,"France",0,0,0,0);
-        this.eRugby = new ERugby(Sport.RUGBY,"Toulon",0,0,0,0);
-        this.match = new Match(0,0);
-    }*/
-
-
     public Championnat() {
         this.match = new Match();
     }
@@ -60,46 +50,46 @@ public class Championnat {
         this.eRugby = eRugby;
     }
 
-    public void entrerScore(Sport sport, int scoreEquipe, int scoreAdversaire) {
+    public void entrerScore(Sport sport, String nomEquipe, int scoreEquipe, int scoreAdversaire) {
         match.majScore(scoreEquipe,scoreAdversaire);
         switch (sport) {
             case FOOT: {
                 if (geteFoot() == null){
-                    seteFoot(new EFoot(Sport.FOOT,"Bayern", 0, 0, 0, 0));
+                    seteFoot(new EFoot(nomEquipe, 0, 0, 0, 0));
                 }
                 eFoot.majSuiteAUnMatch(match);
                 break;
             }
             case HAND: {
                 if (geteHand() == null){
-                    seteHand(new EHand(Sport.HAND,"Montpellier", 0, 0, 0, 0));
+                    seteHand(new EHand(nomEquipe, 0, 0, 0, 0));
                 }
                 eHand.majSuiteAUnMatch(match);
                 break;
             }
             case FUTSAL: {
                 if (getEFutsal() == null){
-                    setEFutsal(new EFutsal(Sport.FUTSAL,"FLamengo", 0, 0, 0, 0));
+                    setEFutsal(new EFutsal(nomEquipe, 0, 0, 0, 0));
                 }
                 EFutsal.majSuiteAUnMatch(match);
                 break;
             }
             case VOLLEY: {
                 if (geteVolley() == null){
-                    seteVolley(new EVolley(Sport.VOLLEY,"France", 0, 0, 0, 0));
+                    seteVolley(new EVolley(nomEquipe, 0, 0, 0, 0));
                 }
                 eVolley.majSuiteAUnMatch(match);
                 break;
             }
             case RUGBY: {
                 if (geteRugby() == null){
-                    seteRugby(new ERugby(Sport.RUGBY,"Toulon", 0, 0, 0, 0));
+                    seteRugby(new ERugby(nomEquipe, 0, 0, 0, 0));
                 }
                 eRugby.majSuiteAUnMatch(match);
                 break;
             }
             default: {
-                System.out.println("PrObLeM BiP bOp");
+                System.out.println("Saisie KO : sport non pris en charge !");
                 break;
             }
         }

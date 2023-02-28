@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="865ea6c8-fa70-44f6-aebc-843c96952c1d" name="Changes" comment="Version championnat vide">
+    <list default="true" id="865ea6c8-fa70-44f6-aebc-843c96952c1d" name="Changes" comment="Version merged corrigé">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Championnat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Championnat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Efutsal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Efutsal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EFoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EFoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EFutsal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EFutsal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EHand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ERugby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ERugby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EVolley.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EVolley.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Equipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Equipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677575956646</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Version merged corrigé">
+      <created>1677620004137</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1677620004137</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +146,7 @@
     <MESSAGE value="version incomplète 1" />
     <MESSAGE value="Final sans version users" />
     <MESSAGE value="Version championnat vide" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version championnat vide" />
+    <MESSAGE value="Version merged corrigé" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version merged corrigé" />
   </component>
 </project>

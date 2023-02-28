@@ -1,24 +1,17 @@
-//TODO:ajouter un attribut type de sport(Enum) => possibiliter de faire des switch/case...
 public abstract class Equipe {
-    private Sport sport;
-    private String name;
+    private final String name;
     private int nbMatch;
     private int nbButsEncaisses;
     private int nbButsMarques;
     private int pointsEquipe;
 
-    public Equipe(Sport sport, String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
-        this.sport = sport;
+    public Equipe(String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
         this.name = name;
         this.nbMatch = nbMatch;
         this.nbButsEncaisses = nbButsEncaisses;
         this.nbButsMarques = nbButsMarques;
         this.pointsEquipe = pointsEquipe;
     }
-    public String getName() {
-        return name;
-    }
-
     abstract int calculNbPoints(Match match);
 
     private float calculMoyenneEncaisses(){
