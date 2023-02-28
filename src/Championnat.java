@@ -1,7 +1,7 @@
 public class Championnat {
     private EFoot eFoot;
     private EHand eHand;
-    private EFutsal EFutsal;
+    private Efutsal eFutsal;
     private EVolley eVolley;
     private ERugby eRugby;
     private  Match match;
@@ -9,7 +9,7 @@ public class Championnat {
     /*public Championnat() {
         this.eFoot = new EFoot(Sport.FOOT,"Bayern", 0, 0, 0, 0);
         this.eHand = new EHand(Sport.HAND,"Montpellier",0,0,0,0);
-        this.EFutsal = new EFutsal(Sport.FUTSAL,"Flamengo",0,0,0,0);
+        this.eFutsal = new Efutsal(Sport.FUTSAL,"Flamengo",0,0,0,0);
         this.eVolley = new EVolley(Sport.VOLLEY,"France",0,0,0,0);
         this.eRugby = new ERugby(Sport.RUGBY,"Toulon",0,0,0,0);
         this.match = new Match(0,0);
@@ -17,7 +17,7 @@ public class Championnat {
 
 
     public Championnat() {
-        this.match = new Match();
+        this.match = new Match(0,0);
     }
 
     public EFoot geteFoot() {
@@ -36,12 +36,12 @@ public class Championnat {
         this.eHand = eHand;
     }
 
-    public EFutsal getEFutsal() {
-        return EFutsal;
+    public Efutsal geteFutsal() {
+        return eFutsal;
     }
 
-    public void setEFutsal(EFutsal EFutsal) {
-        this.EFutsal = EFutsal;
+    public void seteFutsal(Efutsal eFutsal) {
+        this.eFutsal = eFutsal;
     }
 
     public EVolley geteVolley() {
@@ -61,56 +61,42 @@ public class Championnat {
     }
 
     public void entrerScore(Sport sport, int scoreEquipe, int scoreAdversaire) {
-        match.majScore(scoreEquipe,scoreAdversaire);
+        match.setScoreEquipe(scoreEquipe);
+        match.setScoreAdversaire(scoreAdversaire);
         switch (sport) {
             case FOOT: {
                 if (geteFoot() == null){
                     seteFoot(new EFoot(Sport.FOOT,"Bayern", 0, 0, 0, 0));
-                    eFoot.majSuiteAUnMatch(match);
                 }
-                else {
-                    eFoot.majSuiteAUnMatch(match);
-                }
+                eFoot.majSuiteAUnMatch(match);
                 break;
             }
             case HAND: {
                 if (geteHand() == null){
                     seteHand(new EHand(Sport.HAND,"Montpellier", 0, 0, 0, 0));
-                    eHand.majSuiteAUnMatch(match);
                 }
-                else{
-                    eHand.majSuiteAUnMatch(match);
-                }
+                eHand.majSuiteAUnMatch(match);
                 break;
             }
             case FUTSAL: {
-                if (getEFutsal() == null){
-                    setEFutsal(new EFutsal(Sport.FUTSAL,"FLamengo", 0, 0, 0, 0));
-                    EFutsal.majSuiteAUnMatch(match);
+                if (geteFutsal() == null){
+                    seteFutsal(new Efutsal(Sport.FUTSAL,"FLamengo", 0, 0, 0, 0));
                 }
-                else{
-                    EFutsal.majSuiteAUnMatch(match);
-                }
+                eFutsal.majSuiteAUnMatch(match);
                 break;
             }
             case VOLLEY: {
                 if (geteVolley() == null){
                     seteVolley(new EVolley(Sport.VOLLEY,"France", 0, 0, 0, 0));
-                    eVolley.majSuiteAUnMatch(match);
                 }
-                else{
-                    eVolley.majSuiteAUnMatch(match);
-                }
+                eVolley.majSuiteAUnMatch(match);
                 break;
             }
             case RUGBY: {
                 if (geteRugby() == null){
                     seteRugby(new ERugby(Sport.RUGBY,"Toulon", 0, 0, 0, 0));
-                    eRugby.majSuiteAUnMatch(match);
                 }
-                else{
-                    eRugby.majSuiteAUnMatch(match);
-                }
+                eRugby.majSuiteAUnMatch(match);
                 break;
             }
             default: {
@@ -130,9 +116,9 @@ public class Championnat {
         {
             res+= "\n"+eFoot.restituerResultat();
         }
-        if (getEFutsal() != null)
+        if (geteFutsal() != null)
         {
-            res+= "\n"+EFutsal.restituerResultat();
+            res+= "\n"+eFutsal.restituerResultat();
         }
         if (geteRugby() != null)
         {

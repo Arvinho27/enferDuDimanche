@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="865ea6c8-fa70-44f6-aebc-843c96952c1d" name="Changes" comment="Version championnat vide">
-      <change afterPath="$PROJECT_DIR$/src/Sport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Championnat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Championnat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EFoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EFoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EFutsal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EFutsal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EHand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ERugby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ERugby.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EVolley.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EVolley.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Equipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Equipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Efutsal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Efutsal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,14 +18,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -114,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677436199725</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Version championnat vide">
+      <created>1677575956646</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677575956646</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +133,7 @@
     <MESSAGE value="Première version" />
     <MESSAGE value="version incomplète 1" />
     <MESSAGE value="Final sans version users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final sans version users" />
+    <MESSAGE value="Version championnat vide" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version championnat vide" />
   </component>
 </project>
