@@ -1,6 +1,6 @@
 public class EVolley extends Equipe {
-    public EVolley(String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
-        super(name, nbMatch, nbButsEncaisses, nbButsMarques, pointsEquipe);
+    public EVolley(Sport sport, String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
+        super(sport, name, nbMatch, nbButsEncaisses, nbButsMarques, pointsEquipe);
     }
 
     @Override

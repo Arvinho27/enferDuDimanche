@@ -1,7 +1,8 @@
 public class EFutsal extends EFoot{
 
-    public EFutsal(String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
-        super(name, nbMatch, nbButsEncaisses, nbButsMarques, pointsEquipe);
+
+    public EFutsal(Sport sport, String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
+        super(sport, name, nbMatch, nbButsEncaisses, nbButsMarques, pointsEquipe);
     }
 
     @Override
