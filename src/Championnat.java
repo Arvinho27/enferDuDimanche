@@ -54,35 +54,35 @@ public class Championnat {
         switch (sport) {
             case FOOT: {
                 if (geteFoot() == null){
-                    seteFoot(new EFoot(sport.label, 0, 0, 0, 0));
+                    seteFoot(new EFoot(sport.getLabel()));
                 }
                 eFoot.majSuiteAUnMatch(match);
                 break;
             }
             case HAND: {
                 if (geteHand() == null){
-                    seteHand(new EHand(sport.label, 0, 0, 0, 0));
+                    seteHand(new EHand(sport.getLabel()));
                 }
                 eHand.majSuiteAUnMatch(match);
                 break;
             }
             case FUTSAL: {
                 if (getEFutsal() == null){
-                    setEFutsal(new EFutsal(sport.label, 0, 0, 0, 0));
+                    setEFutsal(new EFutsal(sport.getLabel()));
                 }
                 EFutsal.majSuiteAUnMatch(match);
                 break;
             }
             case VOLLEY: {
                 if (geteVolley() == null){
-                    seteVolley(new EVolley(sport.label, 0, 0, 0, 0));
+                    seteVolley(new EVolley(sport.getLabel()));
                 }
                 eVolley.majSuiteAUnMatch(match);
                 break;
             }
             case RUGBY: {
                 if (geteRugby() == null){
-                    seteRugby(new ERugby(sport.label, 0, 0, 0, 0));
+                    seteRugby(new ERugby(sport.getLabel()));
                 }
                 eRugby.majSuiteAUnMatch(match);
                 break;

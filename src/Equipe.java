@@ -5,12 +5,8 @@ public abstract class Equipe {
     private int nbButsMarques;
     private int pointsEquipe;
 
-    public Equipe(String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
+    public Equipe(String name) {
         this.name = name;
-        this.nbMatch = nbMatch;
-        this.nbButsEncaisses = nbButsEncaisses;
-        this.nbButsMarques = nbButsMarques;
-        this.pointsEquipe = pointsEquipe;
     }
     abstract int calculNbPoints(Match match);
 

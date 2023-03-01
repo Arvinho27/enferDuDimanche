@@ -5,7 +5,11 @@ public enum Sport {
     VOLLEY("Equipe de Volley-ball"),
     RUGBY("Equipe de Rugby");
 
-    public final String label;
+    public String getLabel() {
+        return label;
+    }
+
+    private final String label;
 
     Sport(String label) {
         this.label = label;
