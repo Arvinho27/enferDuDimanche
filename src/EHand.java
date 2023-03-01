@@ -1,7 +1,7 @@
 public class EHand extends Equipe{
 
-    public EHand(String name, int nbMatch, int nbButsEncaisses, int nbButsMarques, int pointsEquipe) {
-        super(name, nbMatch, nbButsEncaisses, nbButsMarques, pointsEquipe);
+    public EHand(String name) {
+        super(name);
     }
 
     @Override
@@ -19,3 +19,4 @@ public class EHand extends Equipe{
         return res;
     }
 }
+
